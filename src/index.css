@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f9fafb;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111827;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+  }
+}
+
+/* Animated gradient border */
+@keyframes border-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.glow-border {
+  animation: border-glow 2s ease-in-out infinite;
+}
+
+/* Scan line animation */
+@keyframes scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+.scan-line {
+  animation: scan 2s linear infinite;
+}
+
+/* Pulse ring */
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Heatmap overlay animation */
+@keyframes heatmap-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.heatmap-overlay {
+  animation: heatmap-fade 0.8s ease-in-out;
+}
